@@ -23,9 +23,7 @@ jobs:
     - run: cargo install wasm-pack
     - name: Pack (wasm)
       run: wasm-pack build --target nodejs
-    - run: >
-      sed -i ".bak" -e 's/"name": "safe_prime_gen_wasm"/"name": "@xdefi-tech/safe_prime_gen"/g' pkg/package.json
-    - run: rm pkg/package.json.bak
+    - run: sh ./post_build.sh
     - run: npm publish
       env:
         NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
