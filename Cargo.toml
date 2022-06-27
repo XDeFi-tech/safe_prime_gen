@@ -1,5 +1,5 @@
 [package]
-name = "@xdefi-tech/safe_prime_gen_wasm"
+name = "safe_prime_gen_wasm"
 version = "0.1.0"
 edition = "2021"
 
