@@ -24,7 +24,9 @@ jobs:
     - name: Pack (wasm)
       run: wasm-pack build --target nodejs --out-dir pkg/node
     - name: Pack (wasm)
-      run: wasm-pack build --target browser --out-dir pkg/browser
+      run: wasm-pack build --target bundler --out-dir pkg/bundler
+    - name: Pack (wasm)
+      run: wasm-pack build --target web --out-dir pkg/web
     - run: sh ./post_build.sh
     - uses: actions/setup-node@v3
       with:
