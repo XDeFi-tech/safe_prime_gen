@@ -22,7 +22,9 @@ jobs:
       run: cargo test --verbose
     - run: cargo install wasm-pack
     - name: Pack (wasm)
-      run: wasm-pack build --target nodejs
+      run: wasm-pack build --target nodejs --out-dir pkg/node
+    - name: Pack (wasm)
+      run: wasm-pack build --target browser --out-dir pkg/browser
     - run: sh ./post_build.sh
     - uses: actions/setup-node@v3
       with:

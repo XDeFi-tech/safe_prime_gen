@@ -1,0 +1,8 @@
+{
+  "name": "@xdefi-tech/safe_prime_gen",
+  "version": "0.1.1",
+  "files": [
+    "node/*",
+    "browser/*"
+  ]
+}
